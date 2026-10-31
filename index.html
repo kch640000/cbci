@@ -317,6 +317,39 @@ ul.tight,ol.tight{margin:0;padding-left:18px;display:grid;gap:2px;font-size:13.5
 .lm-steps circle{fill:var(--ink)}
 .lm-gear circle{fill:var(--bg);stroke:var(--green);stroke-width:4;stroke-dasharray:4 3}
 .lm-back{stroke:var(--accent);stroke-width:3;stroke-dasharray:2 7;stroke-linecap:round;fill:none}
+
+/* 10/31 자료별 4교과 적용 */
+[id^="s1031-"]{scroll-margin-top:72px}
+.mats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:6px}
+@media (max-width:680px){.mats{grid-template-columns:1fr}}
+.mats div{background:var(--surface);border-radius:12px;padding:12px 14px;font-size:13px;min-width:0}
+.mats b{display:block;color:var(--ink);font-size:13.5px;margin-bottom:2px}
+.mats small{color:var(--muted);font-size:12px}
+.mat{border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;gap:12px;min-width:0}
+.mat+.mat{margin-top:14px}
+.mat h3{font-size:16px}
+.mat .key{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
+.sj4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:760px){.sj4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.sj4{grid-template-columns:1fr}}
+.sj{--c:var(--green);background:var(--surface);border-radius:12px;border-top:4px solid var(--c);padding:12px 14px;min-width:0}
+.sj.k{--c:var(--green)}.sj.m{--c:var(--blue)}.sj.e{--c:var(--accent)}.sj.a{--c:var(--plum)}
+.sj h4{font-size:13.5px;color:var(--c);margin-bottom:4px}
+.sj p{font-size:13px}
+.hl{background:linear-gradient(transparent 58%,rgba(207,111,51,.25) 0);color:var(--ink);font-weight:700}
+
+/* 아래 바로 가기 막대 */
+.session [id]{scroll-margin-top:72px}
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+nav.bnav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bg);border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(0,0,0,.06);padding-bottom:env(safe-area-inset-bottom,0px)}
+.bnav .in{max-width:820px;margin:0 auto;display:flex;justify-content:safe center;gap:6px;overflow-x:auto;padding:8px 12px;scrollbar-width:none}
+.bnav .in::-webkit-scrollbar{display:none}
+.bnav a{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:58px;max-width:96px;padding:5px 8px;border-radius:10px;text-decoration:none;color:var(--muted);font-size:11px;font-weight:700;line-height:1.25;text-align:center}
+.bnav a svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bnav a:hover{background:var(--surface);color:var(--ink)}
+.bnav a.on{background:var(--lav);color:var(--hdr)}
+.bnav a.top{color:var(--hdr)}
+.bnav a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 </style>
 </head>
 <body style="margin:0">
@@ -324,7 +357,7 @@ ul.tight,ol.tight{margin:0;padding-left:18px;display:grid;gap:2px;font-size:13.5
 
 <header class="mast">
   <div class="wrap">
-    <div class="mast-top"><span>made by <b>ullala 김미숙</b></span><span class="upd" id="upd">update 2026. 10. 24.</span></div>
+    <div class="mast-top"><span>made by <b>ullala 김미숙</b></span><span class="upd" id="upd">update 2026. 10. 31.</span></div>
     <h1>개념기반 교육과정</h1>
     <p class="sub">수석교사 낭독 모임 · 탐구 → 낭독 → 토론 → 교과 적용 · 매주 업데이트</p>
     <p class="book">『생각하는 교실을 위한 개념기반 교육과정 및 수업』 · 국어 · 수학 · 영어 · 미술 수석교사가 함께 읽습니다</p>
@@ -1381,6 +1414,297 @@ ul.tight,ol.tight{margin:0;padding-left:18px;display:grid;gap:2px;font-size:13.5
   </div>
 </section>
 
+<!-- ===================== 회차: 2026.10.31 ===================== -->
+<section class="session" data-session="s1031" data-tab="10/31 · 교과 융합 단원 설계" id="s1031">
+
+  <div class="hero-card">
+    <span class="eyebrow">2026.10.31 · 함께 공부하기 (책 밖으로 한 걸음)</span>
+    <h2>교과 융합 단원 설계 — 핵심 아이디어로 교과를 잇는다면</h2>
+    <p>이번 주는 책을 낭독하지 않고, 논술형 평가 전문가 과정의 교과 융합 강의 자료를 함께 펼쳐 3장에서 배운 단원 설계와 비교해 보았습니다. 자료마다 국어, 수학, 영어, 미술에서 바로 가져갈 수 있는 부분을 따로 모았습니다.</p>
+    <div class="jump">
+      <a class="pill" href="#s1031-inq">탐구</a><a class="pill" href="#s1031-read">함께 본 자료</a><a class="pill" href="#s1031-talk">토론</a><a class="pill pill-strong" href="#s1031-pts">자료별 4교과 적용 포인트</a><a class="pill" href="#s1031-apply">융합 단원 예시</a>
+    </div>
+  </div>
+
+  <section id="s1031-inq">
+    <div class="step-head"><span class="badge b-inq">탐</span><span class="step-kicker">STEP 1 · INQUIRY</span><h2>탐구 — 읽기 전에 먼저 떠올립니다</h2></div>
+    <p class="lead">지난 회차에 3장을 마무리했습니다. 이번에는 3장의 단원 설계가 여러 교과를 잇는 융합 단원에서는 어떻게 달라지는지 살펴보았습니다.</p>
+    <div class="grid3">
+      <div class="card c-mint"><h3>3분 인출 활동</h3><p>내가 해 본 ‘융합 수업’ 하나를 떠올려 보십시오. 그 수업에서 각 교과는 무엇을 맡았습니까? 다른 교과의 결과물을 받아 번역하거나 포스터로 옮기지는 않았습니까?</p></div>
+      <div class="card c-mint"><h3>이번 주 핵심 개념</h3><p>다학문적, 간학문적, 탈학문적 통합 · 공통 개념(매크로 개념) · 단원 일반화 · 기대하는 학습 결과 · 핵심 질문</p></div>
+      <div class="card c-mint"><h3>이번 주 일반화 문장</h3><p>“교과가 각자의 고유한 방식으로 같은 개념을 탐구할 때, 학생은 교과를 넘나드는 이해를 스스로 만들어 간다.”</p></div>
+    </div>
+    <div class="qbox">
+      <p class="eyebrow">이번 주 탐구 질문</p>
+      <ol>
+        <li>주제 중심 융합과 개념 중심 융합은 무엇이 다를까요?</li>
+        <li>단원 일반화와 기대하는 학습 결과는 같은 말일까요, 다른 말일까요?</li>
+        <li>융합 단원에서 평가 요소는 언제, 무엇에서 뽑아야 할까요?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="s1031-read">
+    <div class="step-head"><span class="badge b-read">자</span><span class="step-kicker">STEP 2 · TODAY'S MATERIAL</span><h2>함께 본 자료 — 교과 융합 단원 설계 강의안</h2></div>
+    <p class="lead">2026 논술형 평가 전문가 과정 강의 자료를 함께 넘겨 보며 3장의 내용과 견주었습니다. 이번 주에 본 자료와 다음 강의 자료는 아래 세 가지입니다.</p>
+    <div class="mats">
+      <div><b>자료 1. 교과 융합과 핵심 아이디어의 이해</b>왜 지금 융합인가, 통합의 정도, 단원 핵심 아이디어, 교과 융합 논술형 평가<br><small>10월 28일 강의 · 모임에서 함께 봄</small></div>
+      <div><b>자료 2. 교과 융합 프레임워크의 이해</b>기대하는 학습 결과 7단계, 평가 방식 선택과 GRASPS, 탐구 수업 4단계<br><small>10월 31일 강의 · 모임에서 함께 봄</small></div>
+      <div><b>자료 3. 채점기준표(루브릭) 개발의 이해와 실제</b>채점기준 작성 원칙 여섯 가지, 교과 융합 채점기준<br><small>11월 21일 강의 · 다음에 함께 볼 자료</small></div>
+    </div>
+
+
+    <p class="sub-h" style="margin-top:0">통합의 세 가지 정도</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th>구분</th><th>무엇을 중심으로</th><th>교과의 경계</th><th>예</th></tr></thead>
+      <tbody>
+        <tr><td>다학문적</td><td>하나의 주제나 중심 조직자를 여러 교과가 각자의 방식으로 바라봄</td><td>뚜렷하게 남음</td><td>‘환경’ 주제로 교과마다 따로 수업</td></tr>
+        <tr><td>간학문적</td><td>교과 사이의 공통 개념과 일반화를 연결 고리로 기존 교과를 재구성</td><td>연결되지만 교과는 남음</td><td>‘지속 가능성’, ‘공존’ 같은 공통 개념으로 묶은 단원</td></tr>
+        <tr><td>탈학문적</td><td>실생활의 문제나 쟁점을 중심으로 교과 내용을 끌어와 학습</td><td>보이지 않게 됨</td><td>“대기 오염 문제를 어떻게 해결할 것인가?” (IB PYP에 가까움)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">학교급과의 대응(초등은 탈학문, 중고등은 간학문 등)은 모임에서도 의견이 갈렸습니다. 담임 혼자 여러 교과를 맡는 초등은 교과의 벽을 넘기 쉽고, 교과 교사가 나뉜 중고등은 간학문적 접근이 현실적이라는 데에는 공감했습니다.</p>
+
+    <p class="sub-h">예전의 ‘융합’과 개념 중심 융합</p>
+    <div class="grid2">
+      <div class="card c-sand"><h3>주제 중심 (겉 핥기 융합)</h3><p>과학 시간에 강낭콩을 기르고, 사회 시간에 공동체를 이야기하고, 수확한 콩으로 떡을 만들어 먹는 식입니다. 한 교과의 결과물을 받아 다른 교과에서 번역하거나 포스터로 옮기면, 교과마다 고유한 깊이가 생기지 않습니다.</p></div>
+      <div class="card c-mint"><h3>개념 중심 (원과 교집합)</h3><p>교과마다 자기 원(고유한 내용과 기능)을 그대로 두고, 원이 겹치는 교집합에 공통 개념을 둡니다. 학생은 네 교과를 따로 배우면서도 “환경은 영역끼리 서로 영향을 주고받는다”는 일반화에 스스로 이릅니다. 교사가 답을 주지 않는 것이 핵심입니다.</p></div>
+    </div>
+
+    <p class="sub-h">자료 2의 설계 단계와 3장 11단계 비교</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th>자료 2 (교과 융합 7단계)</th><th>책 3장 (개념 기반 단원)</th><th>모임에서 본 점</th></tr></thead>
+      <tbody>
+        <tr><td>① 성취기준 분석, 핵심 개념 도출</td><td>1 단원명 · 2 렌즈 · 3 스트랜드 · 4 그물</td><td>책은 단원명과 렌즈로 초점부터 잡고, 강의안은 성취기준에서 출발합니다.</td></tr>
+        <tr><td>② 교과별 개념 추출과 공통 개념 도출</td><td>4 그물 안의 개념에 밑줄</td><td>융합 단원에서는 여러 교과를 아우르는 매크로 개념을 뽑아야 합니다.</td></tr>
+        <tr><td>③ 성취기준과 내용 요소로 평가 요소 도출</td><td>9 최종 평가 (일반화 뒤)</td><td>일반화보다 평가 요소가 먼저 나와, 평가가 성취기준 수준으로 줄어드는 느낌이 듭니다.</td></tr>
+        <tr><td>④ 공통 개념과 성취기준을 이어 단원 일반화 진술</td><td>5 일반화</td><td>②→④→③ 순서(공통 개념 → 일반화 → 평가 요소)가 더 자연스럽다는 의견이 모였습니다.</td></tr>
+        <tr><td>⑤ 단원 일반화로 이끄는 핵심 질문</td><td>6 안내 질문</td><td>핵심 질문은 일반화에 답할 수 있게 아우르는 열린 질문이어야 합니다.</td></tr>
+        <tr><td>⑥ 기대하는 학습 결과 구체화</td><td>11 단원 개요</td><td>단원 일반화(이해)에 ‘그 이해로 무엇을 하는가’(전이)를 더한 도착점입니다.</td></tr>
+        <tr><td>⑦ 단원명 정하기</td><td>1 단원명</td><td>단원명은 처음에 정해도 되고, 렌즈와 맥락이 확정된 뒤 마지막에 정해도 됩니다.</td></tr>
+      </tbody>
+    </table></div>
+
+    <p class="sub-h">단원 일반화와 기대하는 학습 결과</p>
+    <div class="grid2">
+      <div class="card c-lav"><h3>단원 일반화</h3><p>학생이 <b>무엇을 이해해야 하는가</b>. 단원의 핵심 아이디어입니다. 맥락을 뺀 전이 가능한 문장입니다.</p></div>
+      <div class="card c-lav"><h3>기대하는 학습 결과</h3><p>그 이해를 가지고 <b>무엇을 할 수 있는가</b>. 백워드 설계 1단계의 이해 목표와 전이 목표에 해당하며, 차시 학습 목표보다 큰 단원 수준의 목표입니다.</p></div>
+    </div>
+    <p class="note">강의안에는 두 칸이 따로 있어 처음에는 같은 말처럼 보였습니다. 모임에서는 ‘이해’와 ‘그 이해의 쓰임(전이)’으로 구별해 보기로 했습니다.</p>
+
+    <p class="sub-h">강의안 예시로 본 좋은 일반화와 핵심 질문</p>
+    <div class="convert" style="margin-bottom:10px">
+      <div class="cv act"><span class="qz-tag act">활동 진술</span><p>인공지능의 변화를 알아보고 사회, 정보, 영어 활동을 통해 공존 방안을 발표한다.</p></div>
+      <div class="cv-arrow" aria-hidden="true">→ 무엇을 이해하는가로</div>
+      <div class="cv und"><span class="qz-tag und">단원 일반화</span><p>사회 변화 속에서 인간과 새로운 기술의 조화로운 공존은 더 나은 삶을 만든다.</p></div>
+    </div>
+    <div class="convert">
+      <div class="cv act"><span class="qz-tag act">사실 질문</span><p>인공지능은 우리 생활에 어떤 변화를 가져왔는가?</p></div>
+      <div class="cv-arrow" aria-hidden="true">→ 일반화를 품은 열린 질문으로</div>
+      <div class="cv und"><span class="qz-tag und">핵심 질문</span><p>새로운 기술은 우리 삶을 어떻게 변화시키며, 인간은 기술과 어떻게 공존해야 하는가?</p></div>
+    </div>
+    <p class="note">단원명도 책 85쪽 기준을 따릅니다. “우리는 누구인가?”만으로는 초점이 모호하고, “우리는 누구인가? 옛날과 오늘날의 가족”처럼 초점과 맥락을 함께 밝혀야 합니다. 강의안 예시도 이 책을 출처로 밝히면 좋겠다는 이야기가 나왔습니다.</p>
+
+    <p class="sub-h">소재가 아니라 개념으로 묶는다</p>
+    <div class="grid2">
+      <div class="card c-sand"><h3>소재 (전이되지 않음)</h3><p>학교, 마을, 자연, 기후 위기, 인공지능처럼 구체적인 사실의 틀입니다. 단원에 맥락을 주지만 시간과 장소에 묶여 있습니다.</p></div>
+      <div class="card c-mint"><h3>개념 (전이됨)</h3><p>변화, 시스템, 상호작용, 관점, 균형, 공존처럼 보편적이고 추상적인 말입니다. 흩어진 사실이 소재의 맥락에서 개념 렌즈를 통과할 때 하나의 일반화로 이어집니다.</p></div>
+    </div>
+    <p class="note">자료 1의 정리: 친환경 에너지의 종류, 복사 평형, 연설문 어휘 같은 사실과 기능은 선택형이나 단답형으로 확인하고, 개념 간 관계를 담은 단원 핵심 아이디어는 논술형과 수행과제로 확인합니다. 통합의 단위도 차시가 아니라 단원 전체입니다.</p>
+
+    <p class="sub-h">평가 방식 세 가지 고르기 (자료 2)</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th>방식</th><th>과제</th><th>채점</th><th>이럴 때 고릅니다</th></tr></thead>
+      <tbody>
+        <tr><td>① 통합 기준, 통합 채점</td><td>교과 융합 과제 1개</td><td>공통 루브릭 하나로 함께 채점</td><td>융합적 문제 해결 자체가 평가의 핵심일 때. 교사들의 공통 루브릭 합의가 꼭 필요합니다.</td></tr>
+        <tr><td>② 한 과제, 교과 분리 채점</td><td>교과 융합 과제 1개</td><td>교과마다 자기 평가 요소를 따로 채점</td><td>결과물은 하나로 모으되 교과별 성취기준 기록이 필요할 때. 자료의 예시가 고른 방식입니다.</td></tr>
+        <tr><td>③ 교과별 과제</td><td>교과별 과제 3개</td><td>교과 분리</td><td>교과마다 성취기준의 증거가 크게 다를 때.</td></tr>
+      </tbody>
+    </table></div>
+
+    <p class="sub-h">GRASPS로 수행과제 맥락 짜기</p>
+    <div class="flow"><span>G 목표</span><em>→</em><span>R 역할</span><em>→</em><span>A 청중</span><em>→</em><span>S 상황</span><em>→</em><span>P 결과물</span><em>→</em><span>S 기준</span></div>
+    <p class="note" style="margin-top:0">점검 질문 세 가지: 학생에게 현실적이고 의미 있는 맥락인가? 사실과 기능만이 아니라 고차원적 사고를 요구하는가? 이 과제로 학생이 일반화의 이해를 보여 줄 수 있는가?</p>
+
+    <p class="sub-h">탐구 수업 4단계와 공통 탐구 질문 (자료 2 예시: 친환경 에너지 단원)</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th>단계</th><th>사고의 초점</th><th>공통 탐구 질문</th><th>활동</th></tr></thead>
+      <tbody>
+        <tr><td>탐구 준비</td><td>문제 상황 이해, 필요성 인식</td><td>왜 에너지 전환이 필요한가?</td><td>기후 위기 사례 분석, 탄소 배출 자료 읽기</td></tr>
+        <tr><td>탐구하기</td><td>정보 조사, 비교, 분석</td><td>과학기술은 문제 해결에 어떻게 기여하는가?</td><td>신재생 에너지 조사, 발전 원리 비교, 장단점 분석</td></tr>
+        <tr><td>일반화하기</td><td>개념 간 관계 도출</td><td>에너지의 가치 인식과 기술 활용은 어떻게 지속 가능한 사회를 만드는가?</td><td>실천 방안 도출, 공동 실천 선언문</td></tr>
+        <tr><td>전이하기</td><td>새로운 맥락에 적용</td><td>지속 가능한 세상을 위해 제도는 어떻게 변해야 하는가?</td><td>국제 포럼 역할 수행, 영어 연설문, 캠페인</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">활동은 ‘재미있는 활동’이 아니라 탐구 질문에 답할 증거를 만드는 활동이어야 합니다. 질문은 사실 확인 → 원인과 영향 분석 → 가치 판단 → 해결안 설계로 깊어집니다.</p>
+
+    <p class="sub-h">교과 융합 논술형 평가란 (자료 1)</p>
+    <div class="convert">
+      <div class="cv act"><span class="qz-tag act">나란히 묶은 문항</span><p>⑴ 인공지능이 가져온 사회 변화 두 가지 (정보) ⑵ 과학기술 발달에 따른 생활양식 변화 (통합사회) ⑶ 영어 지문의 요지 (영어)</p></div>
+      <div class="cv-arrow" aria-hidden="true">→ 하나의 쟁점으로</div>
+      <div class="cv und"><span class="qz-tag und">통합한 문항</span><p>학생 자문위원이 되어 학생, 교사, 학부모를 설득하는 ‘학교 AI 공존 가이드’ 논술문과 공존 약속 두 가지를 쓴다. 해외 AI 윤리 기사의 요지를 근거로 넣는다.</p></div>
+    </div>
+    <p class="note">교과 융합 논술형 평가는 여러 교과를 한 문항에 넣는 것이 아니라, 통합된 사고의 증거를 확보하는 평가입니다.</p>
+  </section>
+
+  <section id="s1031-talk">
+    <div class="step-head"><span class="badge b-talk">토</span><span class="step-kicker">STEP 3 · DIALOGUE</span><h2>토론 — 우리가 나눈 이야기</h2></div>
+    <p class="lead">함께 자료를 보며 나눈 이야기를 논점별로 정리했습니다.</p>
+    <div class="talk">
+      <div class="t-item">
+        <h3>교집합이 곧 핵심 개념이다</h3>
+        <p>환경을 주제로 하면 영어과는 영어과다운 환경 캠페인 글쓰기를, 미술과는 미술다운 표현을 하되 원이 겹치는 자리에 공통 개념을 둡니다. 그 교집합이 단원의 핵심 아이디어이자 핵심 개념이 된다는 데 공감했습니다. 다만 현실에서 네 교과가 함께 설계하기는 쉽지 않다는 이야기도 나왔습니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>평가 요소는 일반화보다 먼저일까</h3>
+        <div class="both">
+          <div><b>먼저 뽑는 이유가 있다</b>무엇을 평가할지 알아야 그것을 핵심 아이디어에 녹일 수 있으니, 평가 요소를 앞에 둔 것일 수 있습니다.</div>
+          <div><b>일반화가 먼저다</b>일반화 없이 성취기준과 내용 요소에서 평가 요소를 뽑으면 평가가 성취기준 수준으로 줄어듭니다. 공통 핵심 아이디어에서 평가 요소를 뽑아야 합니다.</div>
+        </div>
+        <p style="margin-top:10px">통합의 정도에 따라 달라질 수 있다는 정리도 나왔습니다. 다학문적 단원은 우리 교과 성취기준에서도 평가 요소를 뽑을 수 있지만, 탈학문적 단원은 새로 뽑은 공통 개념의 일반화에서 평가 요소를 뽑아야 합니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>성취기준이 먼저일까, 핵심 아이디어가 먼저일까 (다시)</h3>
+        <p>한 강의는 핵심 아이디어를 먼저 분석하라고 하고, 오늘 강의안은 성취기준에서 핵심 개념을 도출하라고 합니다. 미술과 사례처럼 ‘성취기준 분석 → 개념 찾기 → 수업의 언어로 구체화 → 핵심 아이디어 진술’로 가는 과정과 오늘 강의안의 과정이 거의 같다는 데 의견이 모였습니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>영어과 핵심 아이디어의 색 표시 읽기</h3>
+        <p>강의안은 영어과 핵심 아이디어 안의 말을 색으로 나눠 보였습니다. 의사소통은 큰 개념, 목적·상황·관점·맥락·의미는 관련 개념, 굵은 검은 글씨(사고 과정, 전략, 포용적 태도 등)는 맥락을 반영한 말로 읽었습니다. 교과 핵심 아이디어는 엄밀한 의미의 일반화가 아니라 가치·태도까지 담아 쓴 문장이라는 의견도 나왔습니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>융합 단원은 매크로 개념으로</h3>
+        <p>한 교과를 깊게 가르칠 때는 마이크로 개념으로 들어가지만, 세 교과 이상이 함께하는 융합 단원은 지속 가능성, 균형, 원인과 결과, 변화, 공존처럼 교과를 아우르는 매크로 개념을 뽑아야 한다는 정리가 나왔습니다. 매크로는 넓게, 마이크로는 깊게라는 설명이 도움이 되었습니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>개념적 이해와 탐구 진술문이 섞여 있다</h3>
+        <p>개념 기반 교육과정의 개념적 이해는 맥락을 빼고 쓰고, IB의 탐구 진술문은 맥락을 넣어 씁니다. 강의안에는 두 용어가 섞여 있어 처음 듣는 선생님들이 헷갈리기 쉽겠다는 걱정이 나왔습니다. 작년에는 핵심 아이디어로 평가를 잇는 데 집중했다면, 올해는 교과 간 융합까지 넓어져 더 어려워졌다는 이야기도 있었습니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>평가 방식은 학교급의 현실에 맞게</h3>
+        <p>평가 방식 세 가지를 보며, 담임 한 사람이 여러 교과를 맡는 초등은 통합 기준과 통합 채점이 자연스럽고, 교과 교사가 나뉜 중고등은 한 과제를 함께 쓰되 교과별로 채점하는 ② 방식이 현실적이라는 이야기가 나왔습니다. 자료의 예시도 ②를 골랐습니다.</p>
+      </div>
+      <div class="t-item">
+        <h3>공통 탐구 질문을 교과마다 함께 쓴다</h3>
+        <p>탐구 준비, 탐구하기, 일반화하기, 전이하기의 흐름에서 교과마다 따로 질문을 만드는 것이 아니라, 공통 탐구 질문 하나를 두고 교과별로 그 질문에 답하는 탐구를 한다는 점을 확인했습니다. 제대로 이해하고 짜려면 쉽지 않겠다는 데에도 공감했습니다.</p>
+      </div>
+    </div>
+    <div class="open">
+      <h3>남은 질문</h3>
+      <ol>
+        <li>다학문, 간학문, 탈학문을 학교급과 어떻게 짝지어 이해해야 할까?</li>
+        <li>융합 단원의 평가 요소는 교과 성취기준에서 뽑을까, 공통 일반화에서 뽑을까?</li>
+        <li>강의안의 핵심 질문은 단원 일반화에 정말 답하고 있을까?</li>
+        <li>교과 하나도 깊게 하기 어려운데, 융합 단원을 어떻게 현실적으로 시작할까?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="s1031-pts">
+    <div class="step-head"><span class="badge b-apply">적</span><span class="step-kicker">STEP 4 · APPLY</span><h2>자료별 4교과 적용 포인트</h2></div>
+    <p class="lead">세 자료에서 국어, 수학, 영어, 미술 수업으로 바로 가져갈 수 있는 부분입니다. <span class="hl">색으로 강조한 부분</span>이 교과에서 먼저 해 볼 것입니다.</p>
+
+    <div class="mat">
+      <span class="eyebrow">자료 1 · 교과 융합과 핵심 아이디어의 이해</span>
+      <h3>사실은 전이되지 않고, 개념 간 관계가 전이된다</h3>
+      <ul class="key">
+        <li>통합의 단위는 차시가 아니라 단원 전체입니다.</li>
+        <li>교과마다 핵심 아이디어와 성취기준을 분석해 세 교과를 관통하는 개념을 찾고, 교사의 단원 핵심 아이디어로 묶습니다.</li>
+        <li>사실과 기능은 선택형으로, 핵심 아이디어는 논술형과 수행과제로 확인합니다.</li>
+      </ul>
+      <div class="sj4">
+        <div class="sj k"><h4>국어</h4><p>제재(소재)에서 멈추지 말고 <span class="hl">관점, 공동체 같은 개념으로 단원 핵심 아이디어를 세웁니다</span>. 다른 교과의 자료를 근거로 삼아 주장하는 논술형 과제를 국어가 맡기 좋습니다.</p></div>
+        <div class="sj m"><h4>수학</h4><p>그래프 읽기는 선택형으로, <span class="hl">경향을 근거로 예측하고 판단하는 일은 논술형으로</span> 나눠 확인합니다. 수학의 분석 결과가 다른 교과 결론의 근거가 됩니다.</p></div>
+        <div class="sj e"><h4>영어</h4><p>자료의 ‘그린 스피치’ 국제 청소년 환경 포럼 대변인 연설 원고처럼, <span class="hl">영어는 융합 단원의 전이 과제를 맡기 좋습니다</span>. 연설문 어휘는 선택형, 청중을 고려한 설득은 논술형으로 봅니다.</p></div>
+        <div class="sj a"><h4>미술</h4><p>같은 핵심 아이디어를 시각 언어로 다시 표현합니다. <span class="hl">작품과 작가 노트를 함께 받아 이해의 증거로</span> 삼으면, 표현 기능을 넘어 개념 간 관계를 볼 수 있습니다.</p></div>
+      </div>
+    </div>
+
+    <div class="mat">
+      <span class="eyebrow">자료 2 · 교과 융합 프레임워크의 이해</span>
+      <h3>도착점부터 정하고, 평가 방식과 GRASPS로 맥락을 짠다</h3>
+      <ul class="key">
+        <li>기대하는 학습 결과 7단계: 성취기준 선정 → 공통 핵심 개념 → 평가 요소 → 단원 일반화 → 핵심 질문 → 기대하는 학습 결과 → 단원명</li>
+        <li>평가 방식은 세 가지 가운데 고르고, 수행과제는 GRASPS로 짭니다.</li>
+        <li>수업은 탐구 준비 → 탐구하기 → 일반화하기 → 전이하기로, 공통 탐구 질문 하나로 묶습니다.</li>
+      </ul>
+      <div class="sj4">
+        <div class="sj k"><h4>국어</h4><p>역할은 기자, 편집자, 토론자. <span class="hl">학교 신문 사설이나 토론 입론서</span>를 결과물로 삼고, 일반화하기 단계에서 교과별 탐구 결과를 한 편의 글로 엮는 일을 맡습니다.</p></div>
+        <div class="sj m"><h4>수학</h4><p>역할은 통계학자, 여론 조사원. <span class="hl">탐구하기 단계의 자료 수집과 분석</span>을 맡고, ② 방식이면 ‘자료를 그래프로 나타내고 해석하기’를 수학 평가 요소로 따로 채점합니다.</p></div>
+        <div class="sj e"><h4>영어</h4><p>렌즈는 의사소통. 역할은 대변인, 기자, 홍보 담당자. <span class="hl">전이하기 단계에서 국제 포럼 연설문이나 캠페인 글</span>을 쓰고, 청중과 목적을 GRASPS의 A와 S에 분명히 씁니다.</p></div>
+        <div class="sj a"><h4>미술</h4><p>역할은 큐레이터, 디자이너, 전시 담당자. 선, 색, 형태 같은 미술 개념은 마이크로이므로 <span class="hl">융합 단원에서는 균형, 관점 같은 매크로 개념으로 올려</span> 연결합니다.</p></div>
+      </div>
+    </div>
+
+    <div class="mat">
+      <span class="eyebrow">자료 3 · 채점기준표(루브릭) 개발의 이해와 실제 · 다음에 함께 볼 자료</span>
+      <h3>교과를 가로지르는 연결을 따로 채점한다</h3>
+      <ul class="key">
+        <li>정도 표현(구체적으로, 논리적으로)만으로 수준을 나누지 않고, 답안에서 확인할 행동으로 씁니다.</li>
+        <li>상위 점수는 하위 점수에 요구를 하나만 더하고, 배점은 평가 요소별로 등간격으로 둡니다.</li>
+        <li>다학문형은 교과별 요소에 연결 요소 하나를 더하고, 간학문형은 공통 기능 층위에서 요소를 다시 뽑고, 탈학문형은 과제 수행 단계가 곧 요소가 됩니다.</li>
+        <li>‘한 교과의 결과를 다른 교과의 근거로 삼기’는 어느 교과 성취기준에도 없고, 과제를 하나로 묶을 때만 생기는 요소입니다.</li>
+      </ul>
+      <div class="sj4">
+        <div class="sj k"><h4>국어</h4><p>‘관점을 종합적으로 분석함’ 대신 <span class="hl">‘관점이 드러나는 문장을 인용하고 자신의 말로 풀어 설명함’</span>처럼 행동 조건으로 씁니다. 자료의 성취수준 연계 사례도 국어(문학 해석과 평가)입니다.</p></div>
+        <div class="sj m"><h4>수학</h4><p>자료 사례처럼 <span class="hl">벤 다이어그램으로 드러난 결과가 다른 교과 제안의 근거</span>가 되게 합니다. 연산의 정확성처럼 통합 과제에 남기지 않은 요소는 다른 문항에서 확인합니다.</p></div>
+        <div class="sj e"><h4>영어</h4><p>발문의 반응 지시어(서술하시오, 설명하시오)가 곧 수행 수준의 동사가 됩니다. <span class="hl">조건에는 채점할 것만 넣고</span>, 발문이 이미 요구한 것은 조건에서 반복하지 않습니다.</p></div>
+        <div class="sj a"><h4>미술</h4><p>체크리스트나 상, 중, 하 표시만으로는 질적 차이를 가르지 못합니다. <span class="hl">의도와 조형 선택이 서로 이어지는지</span>를 수행 수준 문장으로 씁니다.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s1031-apply">
+    <div class="step-head"><span class="badge b-apply">적</span><span class="step-kicker">STEP 4 · APPLY</span><h2>교과 적용 — 간학문적 융합 단원 예시</h2></div>
+    <p class="lead">강의안 실습 주제 ‘기후 변화와 지속 가능성’으로 국어, 수학, 영어, 미술이 함께하는 간학문적 단원을 짜 보았습니다. 교과마다 자기 원을 지키고, 교집합에 매크로 개념을 둡니다.</p>
+    <div class="web">
+      <div class="lens">공통 개념 (매크로): 지속 가능성 · 공존 · 원인과 결과</div>
+      <div class="core">우리의 선택은 미래를 어떻게 바꿀까?<br><small style="font-weight:500">기후 변화와 지속 가능한 삶</small></div>
+      <div class="st s1"><h4>국어 · 관점</h4><ul><li>기후 위기를 다룬 글과 작품 읽기</li><li>서로 다른 관점 비교</li><li><b>개념</b> 관점, 타자, 공동체</li></ul></div>
+      <div class="st s2"><h4>수학 · 변화</h4><ul><li>우리 지역 기온, 배출량 자료</li><li>그래프로 나타내고 해석하기</li><li><b>개념</b> 변화, 경향, 예측</li></ul></div>
+      <div class="st s3"><h4>영어 · 의사소통</h4><ul><li>캠페인 글과 기사 읽기</li><li>근거를 들어 의견 주장하기</li><li><b>개념</b> 목적, 청중, 설득</li></ul></div>
+      <div class="st s4"><h4>미술 · 표현</h4><ul><li>공익 포스터 분석</li><li>메시지를 담은 작품 계획과 표현</li><li><b>개념</b> 의도, 강조, 소통</li></ul></div>
+    </div>
+
+    <p class="sub-h">공통 일반화와 핵심 질문</p>
+    <ol class="gen">
+      <li><b>(공통 · 최종)</b> 인간의 활동과 자연은 서로 영향을 주고받기 때문에, 변화의 원인을 이해한 공동체가 지속 가능한 공존의 길을 찾는다.</li>
+    </ol>
+    <div class="qs" style="margin-top:10px">
+      <div><span class="qt C">핵심 질문</span><span>우리의 선택은 지구와 미래 세대에 어떤 영향을 주는가?</span></div>
+      <div><span class="qt P">논쟁적</span><span>기후 위기 앞에서 개인의 실천과 제도의 변화 중 무엇이 더 시급한가?</span></div>
+    </div>
+
+    <p class="sub-h">교과별 일반화와 평가 (각자의 원)</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th>교과</th><th>성취기준</th><th>교과 일반화</th><th>이해를 위한 평가 (실생활 맥락)</th></tr></thead>
+      <tbody>
+        <tr><td>국어</td><td>[9국05-09] 문학을 통해 타자를 이해하고 공동체의 문제에 참여하는 태도를 지닌다.</td><td>독자는 작품 속 인물의 삶을 통해 공동체의 문제를 자신의 문제로 받아들인다.</td><td>기후 위기를 겪는 인물의 처지를 근거로 해석하고, 우리 마을 문제와 견주어 쓰기</td></tr>
+        <tr><td>수학</td><td>[9수02-06] 다양한 상황을 그래프로 나타내고, 주어진 그래프를 해석할 수 있다.</td><td>그래프의 경향은 변화의 원인을 짐작하고 앞으로를 예측하는 근거가 된다.</td><td>우리 지역 30년 기온 자료를 그래프로 나타내고, 변화의 경향을 근거로 학교 에너지 절약 제안하기</td></tr>
+        <tr><td>영어</td><td>[9영02-06] 친숙한 주제에 관해 자신의 의견을 주장한다.</td><td>글쓴이는 청중과 목적에 맞는 근거를 골라 읽는 사람의 생각과 행동을 바꾼다.</td><td>학교 누리집에 올릴 기후 행동 캠페인 글을 쓰고, 청중을 고려해 고른 근거 두 가지를 설명하기</td></tr>
+        <tr><td>미술</td><td>[9미02-01] 주제를 탐구하고 의도를 반영하여 적합한 표현을 계획할 수 있다.</td><td>작가는 전하려는 의도에 맞게 조형 요소를 골라 공동체에 말을 건다.</td><td>학교 축제 기후 포스터를 계획하고, 작가 노트에 의도와 조형 선택을 설명하기</td></tr>
+      </tbody>
+    </table></div>
+    <p class="sub-h">연결 요소 채점 (자료 3을 이 단원에 적용)</p>
+    <p class="note" style="margin-top:0">네 교과가 ② 방식(한 과제, 교과 분리 채점)으로 각자 채점하고, 공통 평가 요소 하나를 함께 채점합니다. 이 요소는 어느 교과 성취기준에도 없어 배점으로 채점하고, 교과별 평가 요소에는 해당 성취기준의 성취수준(A, B, C)을 병기합니다.</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th>점수</th><th>공통 평가 요소: 한 교과의 결과를 다른 교과의 근거로 삼기</th></tr></thead>
+      <tbody>
+        <tr><td>4</td><td>세 교과 이상의 결과가 서로의 근거로 이어져 “우리의 선택이 미래를 바꾼다”는 하나의 결론에 이르도록 서술함</td></tr>
+        <tr><td>3</td><td>두 교과의 결과를 서로의 근거로 삼아 연결하여 서술함 (예: 수학 그래프의 경향을 영어 캠페인 글의 근거로 씀)</td></tr>
+        <tr><td>2</td><td>여러 교과의 결과를 한 편에 담되 각각 나열하여 서술함</td></tr>
+        <tr><td>1</td><td>한 교과의 결과를 중심으로 쓰고 나머지 교과는 언급만 함</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">마지막 차시에는 네 교과 산출물을 한 전시로 모으고, 학생이 “우리의 선택은 ___ 때문에 미래를 바꾼다”는 자기 일반화를 쓰게 합니다. 교사가 공통 일반화를 먼저 말해 주지 않는 것이 핵심입니다. 국어, 수학 성취기준은 고시문 원문과 한 번 대조해 주십시오.</p>
+  </section>
+
+  <div class="next">
+    <span class="eyebrow">다음 회차 예고</span>
+    <h3>오늘 이야기 이어 가기 · 4장 「개념 기반 교실에서의 탐구 학습」</h3>
+    <p>다음 주에 오늘 이야기를 이어 가기로 했습니다. 이 책을 마친 뒤에는 IB 「원리부터 실천까지」를 함께 읽어 보자는 제안도 나왔습니다.</p>
+  </div>
+</section>
+
 </main>
 
 <footer><div class="wrap">개념기반 교육과정 낭독 모임 기록 · 책 인용은 낭독 범위 안에서 짧게 옮겼습니다.</div></footer>
@@ -1718,6 +2042,57 @@ if(location.hash.length>1){ const el=document.getElementById(location.hash.slice
     </article>`).join("");
 })();
 </script>
+<nav class="bnav" aria-label="이 회차 바로 가기"><div class="in" id="bnav-in"></div></nav>
+<script>
+(function(){
+  const box=document.getElementById("bnav-in"); if(!box) return;
+  const P={
+    top:'<path d="M12 19V5M5 12l7-7 7 7"/>',
+    inq:'<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
+    read:'<path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/>',
+    talk:'<path d="M4 5h16v10H9l-5 4z"/>',
+    apply:'<path d="M4 20h4L19 9l-4-4L4 16z"/>',
+    check:'<path d="M4 12l5 5L20 6"/>',
+    grid:'<rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/>',
+    q:'<circle cx="12" cy="12" r="8"/><path d="M10 9.5a2 2 0 1 1 2.5 2c-.5.2-.5.6-.5 1.5M12 16h.01"/>',
+    dot:'<circle cx="12" cy="12" r="3"/>'
+  };
+  function icon(t){
+    let k="dot";
+    if(/적용/.test(t))k="apply";
+    else if(/탐구/.test(t))k="inq";
+    else if(/낭독|자료|총괄/.test(t))k="read";
+    else if(/토론|이야기/.test(t))k="talk";
+    else if(/질문|사고 확장/.test(t))k="q";
+    else if(/평가|채점|체크/.test(t))k="check";
+    else if(/설계|단계|맵|원리/.test(t))k="grid";
+    else if(/적용|예시|사례/.test(t))k="apply";
+    return '<svg viewBox="0 0 24 24" aria-hidden="true">'+P[k]+'</svg>';
+  }
+  let links=[];
+  function build(){
+    const sec=[...document.querySelectorAll(".session")].find(x=>!x.hidden); if(!sec) return;
+    const seen=new Set(); const items=[];
+    sec.querySelectorAll(".jump a[href^='#']").forEach(a=>{const h=a.getAttribute("href"); if(seen.has(h))return; seen.add(h); items.push([h,a.textContent.trim()]);});
+    box.innerHTML='<a href="#top" class="top"><svg viewBox="0 0 24 24" aria-hidden="true">'+P.top+'</svg><span>처음으로</span></a>'
+      +items.map(([h,t])=>'<a href="'+h+'">'+icon(t)+'<span>'+t.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))+'</span></a>').join("");
+    links=[...box.querySelectorAll("a:not(.top)")];
+    box.querySelector("a.top").addEventListener("click",e=>{e.preventDefault();window.scrollTo({top:0,behavior:"smooth"});});
+    mark();
+  }
+  function mark(){
+    let cur=null;
+    links.forEach(a=>{const el=document.getElementById(a.getAttribute("href").slice(1)); if(el && el.getBoundingClientRect().top<140) cur=a;});
+    links.forEach(a=>a.classList.toggle("on",a===cur));
+    if(cur){const r=cur.getBoundingClientRect(),b=box.getBoundingClientRect(); if(r.left<b.left||r.right>b.right) box.scrollLeft+= (r.left-b.left)-(b.width-r.width)/2;}
+  }
+  let tick=false;
+  window.addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(()=>{mark();tick=false;});}},{passive:true});
+  document.querySelectorAll(".session").forEach(sec=>new MutationObserver(build).observe(sec,{attributes:true,attributeFilter:["hidden"]}));
+  build();
+})();
+</script>
+
 
 </body>
 </html>
